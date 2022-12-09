@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <Title>VR Hot Air Ballon</Title>
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+    <script src="./js/movement.js"></script>
+ </head>
+ <a-scene>
+
+     <!--Environment-->
+     <a-entity environment="preset: forest;light: directional"></a-entity>
+
+    <a-assets>
+        <a-asset-item id="hot_air_ballon" src="./assets/hot_air_ballon/scene.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-camera wasd-controls look-controls="enabled: true" position="0 0 0">
+    </a-camera>
+
+    <a-entity id="ballon" position="0 1 10" gltf-model="#hot_air_ballon" scale="5 5 5" rotation="0 90 0"></a-entity>
+   
+ </a-scene>
+</html>
